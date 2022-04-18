@@ -9,7 +9,7 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Called when a creature is spawned into a world.
- * <p />
+ * <p>
  * If a Creature Spawn event is cancelled, the creature will not spawn.
  */
 public class CreatureSpawnEvent extends EntityEvent implements Cancellable {
@@ -53,7 +53,8 @@ public class CreatureSpawnEvent extends EntityEvent implements Cancellable {
     /**
      * Gets the type of creature being spawned.
      *
-     * @return A CreatureType value detailing the type of creature being spawned
+     * @return A CreatureType value detailing the type of creature being
+     *     spawned
      * @deprecated In favour of {@link #getEntityType()}.
      */
     @Deprecated
@@ -64,7 +65,8 @@ public class CreatureSpawnEvent extends EntityEvent implements Cancellable {
     /**
      * Gets the reason for why the creature is being spawned.
      *
-     * @return A SpawnReason value detailing the reason for the creature being spawned
+     * @return A SpawnReason value detailing the reason for the creature being
+     *     spawned
      */
     public SpawnReason getSpawnReason() {
         return spawnReason;
@@ -89,7 +91,8 @@ public class CreatureSpawnEvent extends EntityEvent implements Cancellable {
          */
         NATURAL,
         /**
-         * When an entity spawns as a jockey of another entity (mostly spider jockeys)
+         * When an entity spawns as a jockey of another entity (mostly spider
+         * jockeys)
          */
         JOCKEY,
         /**
@@ -147,6 +150,39 @@ public class CreatureSpawnEvent extends EntityEvent implements Cancellable {
          * When a slime splits
          */
         SLIME_SPLIT,
+        /**
+         * When an entity calls for reinforcements
+         */
+        REINFORCEMENTS,
+        /**
+         * When a creature is spawned by nether portal
+         */
+        NETHER_PORTAL,
+        /**
+         * When a creature is spawned by a dispenser dispensing an egg
+         */
+        DISPENSE_EGG,
+        /**
+         * When a zombie infects a villager
+         */
+        INFECTION,
+        /**
+         * When a villager is cured from infection
+         */
+        CURED,
+        /**
+         * When an ocelot has a baby spawned along with them
+         */
+        OCELOT_BABY,
+        /**
+         * When a silverfish spawns from a block
+         */
+        SILVERFISH_BLOCK,
+        /**
+         * When an entity spawns as a mount of another entity (mostly chicken
+         * jockeys)
+         */
+        MOUNT,
         /**
          * When a creature is spawned by plugins
          */

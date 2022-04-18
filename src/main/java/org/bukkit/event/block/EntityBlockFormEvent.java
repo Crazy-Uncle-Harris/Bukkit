@@ -6,10 +6,10 @@ import org.bukkit.entity.Entity;
 
 /**
  * Called when a block is formed by entities.
- * <p />
+ * <p>
  * Examples:
  * <ul>
- * <li>Snow formed by a {@link org.bukkit.entity.Snowman}.</li>
+ * <li>Snow formed by a {@link org.bukkit.entity.Snowman}.
  * </ul>
  */
 public class EntityBlockFormEvent extends BlockFormEvent {

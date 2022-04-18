@@ -19,7 +19,9 @@ public interface NoteBlock extends BlockState {
      * Gets the note.
      *
      * @return The note ID.
+     * @deprecated Magic value
      */
+    @Deprecated
     public byte getRawNote();
 
     /**
@@ -33,12 +35,14 @@ public interface NoteBlock extends BlockState {
      * Set the note.
      *
      * @param note The note ID.
+     * @deprecated Magic value
      */
+    @Deprecated
     public void setRawNote(byte note);
 
     /**
      * Attempts to play the note at block
-     * <p />
+     * <p>
      * If the block is no longer a note block, this will return false
      *
      * @return true if successful, otherwise false
@@ -51,7 +55,9 @@ public interface NoteBlock extends BlockState {
      * @param instrument Instrument ID
      * @param note Note ID
      * @return true if successful, otherwise false
+     * @deprecated Magic value
      */
+    @Deprecated
     public boolean play(byte instrument, byte note);
 
     /**

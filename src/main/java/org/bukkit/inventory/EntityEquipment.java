@@ -6,6 +6,7 @@ import org.bukkit.entity.Entity;
  * An interface to a creatures inventory
  */
 public interface EntityEquipment {
+
     /**
      * Gets a copy of the item the entity is currently holding
      *
@@ -96,20 +97,26 @@ public interface EntityEquipment {
     void clear();
 
     /**
-     * Gets the chance of the currently held item being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Gets the chance of the currently held item being dropped upon this
+     * creature's death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @return chance of the currently held item being dropped (1 for players)
      */
     float getItemInHandDropChance();
 
     /**
-     * Sets the chance of the item this creature is currently holding being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Sets the chance of the item this creature is currently holding being
+     * dropped upon this creature's death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @param chance the chance of the currently held item being dropped
      * @throws UnsupportedOperationException when called on players
@@ -118,9 +125,11 @@ public interface EntityEquipment {
 
     /**
      * Gets the chance of the helmet being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @return the chance of the helmet being dropped (1 for players)
      */
@@ -128,9 +137,11 @@ public interface EntityEquipment {
 
     /**
      * Sets the chance of the helmet being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @param chance of the helmet being dropped
      * @throws UnsupportedOperationException when called on players
@@ -138,20 +149,26 @@ public interface EntityEquipment {
     void setHelmetDropChance(float chance);
 
     /**
-     * Gets the chance of the chest plate being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Gets the chance of the chest plate being dropped upon this creature's
+     * death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @return the chance of the chest plate being dropped (1 for players)
      */
     float getChestplateDropChance();
 
     /**
-     * Sets the chance of the chest plate being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Sets the chance of the chest plate being dropped upon this creature's
+     * death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @param chance of the chest plate being dropped
      * @throws UnsupportedOperationException when called on players
@@ -159,20 +176,26 @@ public interface EntityEquipment {
     void setChestplateDropChance(float chance);
 
     /**
-     * Gets the chance of the leggings being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Gets the chance of the leggings being dropped upon this creature's
+     * death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @return the chance of the leggings being dropped (1 for players)
      */
     float getLeggingsDropChance();
 
     /**
-     * Sets the chance of the leggings being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * Sets the chance of the leggings being dropped upon this creature's
+     * death
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @param chance chance of the leggings being dropped
      * @throws UnsupportedOperationException when called on players
@@ -181,9 +204,11 @@ public interface EntityEquipment {
 
     /**
      * Gets the chance of the boots being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @return the chance of the boots being dropped (1 for players)
      */
@@ -191,9 +216,11 @@ public interface EntityEquipment {
 
     /**
      * Sets the chance of the boots being dropped upon this creature's death
-     * <p />
-     * <li />A drop chance of 0F will never drop
-     * <li />A drop chance of 1F will always drop
+     * <p>
+     * <ul>
+     * <li>A drop chance of 0F will never drop
+     * <li>A drop chance of 1F will always drop
+     * </ul>
      *
      * @param chance of the boots being dropped
      * @throws UnsupportedOperationException when called on players

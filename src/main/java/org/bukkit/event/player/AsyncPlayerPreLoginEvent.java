@@ -1,12 +1,14 @@
 package org.bukkit.event.player;
 
 import java.net.InetAddress;
+import java.util.UUID;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 /**
- * Stores details for players attempting to log in.<br>
+ * Stores details for players attempting to log in.
+ * <p>
  * This event is asynchronous, and not run using main thread.
  */
 public class AsyncPlayerPreLoginEvent extends Event {
@@ -15,13 +17,20 @@ public class AsyncPlayerPreLoginEvent extends Event {
     private String message;
     private final String name;
     private final InetAddress ipAddress;
+    private final UUID uniqueId;
 
+    @Deprecated
     public AsyncPlayerPreLoginEvent(final String name, final InetAddress ipAddress) {
+        this(name, ipAddress, null);
+    }
+
+    public AsyncPlayerPreLoginEvent(final String name, final InetAddress ipAddress, final UUID uniqueId) {
         super(true);
         this.result = Result.ALLOWED;
         this.message = "";
         this.name = name;
         this.ipAddress = ipAddress;
+        this.uniqueId = uniqueId;
     }
 
     /**
@@ -37,7 +46,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      * Gets the current result of the login, as an enum
      *
      * @return Current Result of the login
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from {@link
+     *     PlayerPreLoginEvent}
      * @see #getLoginResult()
      */
     @Deprecated
@@ -58,7 +68,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      * Sets the new result of the login, as an enum
      *
      * @param result New result to set
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from {@link
+     *     PlayerPreLoginEvent}
      * @see #setLoginResult(Result)
      */
     @Deprecated
@@ -67,7 +78,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
     }
 
     /**
-     * Gets the current kick message that will be used if getResult() != Result.ALLOWED
+     * Gets the current kick message that will be used if getResult() !=
+     * Result.ALLOWED
      *
      * @return Current kick message
      */
@@ -108,7 +120,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      *
      * @param result New result for disallowing the player
      * @param message Kick message to display to the user
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from {@link
+     *     PlayerPreLoginEvent}
      * @see #disallow(Result, String)
      */
     @Deprecated
@@ -133,6 +146,15 @@ public class AsyncPlayerPreLoginEvent extends Event {
      */
     public InetAddress getAddress() {
         return ipAddress;
+    }
+
+    /**
+     * Gets the player's unique ID.
+     *
+     * @return The unique ID
+     */
+    public UUID getUniqueId() {
+        return uniqueId;
     }
 
     @Override
@@ -162,7 +184,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
          */
         KICK_BANNED,
         /**
-         * The player is not allowed to log in, due to them not being on the white list
+         * The player is not allowed to log in, due to them not being on the
+         * white list
          */
         KICK_WHITELIST,
         /**

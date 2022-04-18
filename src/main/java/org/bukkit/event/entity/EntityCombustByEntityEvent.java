@@ -2,6 +2,9 @@ package org.bukkit.event.entity;
 
 import org.bukkit.entity.Entity;
 
+/**
+ * Called when an entity causes another entity to combust.
+ */
 public class EntityCombustByEntityEvent extends EntityCombustEvent {
     private final Entity combuster;
 
@@ -11,7 +14,7 @@ public class EntityCombustByEntityEvent extends EntityCombustEvent {
     }
 
     /**
-     * The combuster can be a WeatherStorm a Blaze, or an Entity holding a FIRE_ASPECT enchanted item.
+     * Get the entity that caused the combustion event.
      *
      * @return the Entity that set the combustee alight.
      */

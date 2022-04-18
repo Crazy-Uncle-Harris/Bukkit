@@ -4,6 +4,7 @@ package org.bukkit.event;
  * Represents an event's priority in execution
  */
 public enum EventPriority {
+
     /**
      * Event call is of very low importance and should be ran first, to allow
      * other plugins to further customise the outcome
@@ -14,7 +15,8 @@ public enum EventPriority {
      */
     LOW(1),
     /**
-     * Event call is neither important or unimportant, and may be ran normally
+     * Event call is neither important nor unimportant, and may be ran
+     * normally
      */
     NORMAL(2),
     /**
@@ -28,7 +30,7 @@ public enum EventPriority {
     HIGHEST(4),
     /**
      * Event is listened to purely for monitoring the outcome of an event.
-     * <p/>
+     * <p>
      * No modifications to the event should be made under this priority
      */
     MONITOR(5);

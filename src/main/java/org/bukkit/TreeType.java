@@ -4,6 +4,7 @@ package org.bukkit;
  * Tree and organic structure types.
  */
 public enum TreeType {
+
     /**
      * Regular tree, no branches
      */
@@ -33,6 +34,10 @@ public enum TreeType {
      */
     SMALL_JUNGLE,
     /**
+     * Jungle tree with cocoa plants; 1 block wide
+     */
+    COCOA_TREE,
+    /**
      * Small bush that grows in the jungle
      */
     JUNGLE_BUSH,
@@ -48,4 +53,20 @@ public enum TreeType {
      * Swamp tree (regular with vines on the side)
      */
     SWAMP,
+    /**
+     * Acacia tree.
+     */
+    ACACIA,
+    /**
+     * Dark Oak tree.
+     */
+    DARK_OAK,
+    /**
+     * Mega redwood tree; 4 blocks wide and tall
+     */
+    MEGA_REDWOOD,
+    /**
+     * Tall birch tree
+     */
+    TALL_BIRCH,
 }

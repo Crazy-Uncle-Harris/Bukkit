@@ -6,14 +6,16 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Called when a block spreads based on world conditions.
- * Use {@link BlockFormEvent} to catch blocks that "randomly" form instead of actually spread.
- * <p />
+ * <p>
+ * Use {@link BlockFormEvent} to catch blocks that "randomly" form instead of
+ * actually spread.
+ * <p>
  * Examples:
  * <ul>
- * <li>Mushrooms spreading.</li>
- * <li>Fire spreading.</li>
+ * <li>Mushrooms spreading.
+ * <li>Fire spreading.
  * </ul>
- * <p />
+ * <p>
  * If a Block Spread event is cancelled, the block will not spread.
  *
  * @see BlockFormEvent

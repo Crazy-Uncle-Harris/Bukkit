@@ -105,9 +105,26 @@ public abstract class PotionEffectType {
     public static final PotionEffectType POISON = new PotionEffectTypeWrapper(19);
 
     /**
-     * Deals damage to an entity over time and gives the health to the shooter.
+     * Deals damage to an entity over time and gives the health to the
+     * shooter.
      */
     public static final PotionEffectType WITHER = new PotionEffectTypeWrapper(20);
+
+    /**
+     * Increases the maximum health of an entity.
+     */
+    public static final PotionEffectType HEALTH_BOOST = new PotionEffectTypeWrapper(21);
+
+    /**
+     * Increases the maximum health of an entity with health that cannot be
+     * regenerated, but is refilled every 30 seconds.
+     */
+    public static final PotionEffectType ABSORPTION = new PotionEffectTypeWrapper(22);
+
+    /**
+     * Increases the food level of an entity each tick.
+     */
+    public static final PotionEffectType SATURATION = new PotionEffectTypeWrapper(23);
 
     private final int id;
 
@@ -116,7 +133,8 @@ public abstract class PotionEffectType {
     }
 
     /**
-     * Creates a PotionEffect from this PotionEffectType, applying duration modifiers and checks.
+     * Creates a PotionEffect from this PotionEffectType, applying duration
+     * modifiers and checks.
      *
      * @see PotionBrewer#createEffect(PotionEffectType, int, int)
      * @param duration time in ticks
@@ -138,7 +156,9 @@ public abstract class PotionEffectType {
      * Returns the unique ID of this type.
      *
      * @return Unique ID
+     * @deprecated Magic value
      */
+    @Deprecated
     public int getId() {
         return id;
     }
@@ -182,7 +202,7 @@ public abstract class PotionEffectType {
         return "PotionEffectType[" + id + ", " + getName() + "]";
     }
 
-    private static final PotionEffectType[] byId = new PotionEffectType[21];
+    private static final PotionEffectType[] byId = new PotionEffectType[24];
     private static final Map<String, PotionEffectType> byName = new HashMap<String, PotionEffectType>();
     // will break on updates.
     private static boolean acceptingNew = true;
@@ -192,7 +212,9 @@ public abstract class PotionEffectType {
      *
      * @param id Unique ID to fetch
      * @return Resulting type, or null if not found.
+     * @deprecated Magic value
      */
+    @Deprecated
     public static PotionEffectType getById(int id) {
         if (id >= byId.length || id < 0)
             return null;
@@ -212,7 +234,7 @@ public abstract class PotionEffectType {
 
     /**
      * Registers an effect type with the given object.
-     * <p />
+     * <p>
      * Generally not to be used from within a plugin.
      *
      * @param type PotionType to register

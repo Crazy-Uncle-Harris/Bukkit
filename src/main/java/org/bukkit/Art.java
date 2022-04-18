@@ -69,7 +69,9 @@ public enum Art {
      * Get the ID of this painting.
      *
      * @return The ID of this painting
+     * @deprecated Magic value
      */
+    @Deprecated
     public int getId() {
         return id;
     }
@@ -79,14 +81,16 @@ public enum Art {
      *
      * @param id The ID
      * @return The painting
+     * @deprecated Magic value
      */
+    @Deprecated
     public static Art getById(int id) {
         return BY_ID.get(id);
     }
 
     /**
      * Get a painting by its unique name
-     * <p />
+     * <p>
      * This ignores underscores and capitalization
      *
      * @param name The name

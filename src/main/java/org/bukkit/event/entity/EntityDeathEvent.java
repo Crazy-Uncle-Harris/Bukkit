@@ -30,9 +30,9 @@ public class EntityDeathEvent extends EntityEvent {
 
     /**
      * Gets how much EXP should be dropped from this death.
-     * <p />
-     * This does not indicate how much EXP should be taken from the entity in question,
-     * merely how much should be created after its death.
+     * <p>
+     * This does not indicate how much EXP should be taken from the entity in
+     * question, merely how much should be created after its death.
      *
      * @return Amount of EXP to drop.
      */
@@ -42,9 +42,9 @@ public class EntityDeathEvent extends EntityEvent {
 
     /**
      * Sets how much EXP should be dropped from this death.
-     * <p />
-     * This does not indicate how much EXP should be taken from the entity in question,
-     * merely how much should be created after its death.
+     * <p>
+     * This does not indicate how much EXP should be taken from the entity in
+     * question, merely how much should be created after its death.
      *
      * @param exp Amount of EXP to drop.
      */

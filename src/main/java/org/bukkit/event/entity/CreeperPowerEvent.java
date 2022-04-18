@@ -7,7 +7,7 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Called when a Creeper is struck by lightning.
- * <p />
+ * <p>
  * If a Creeper Power event is cancelled, the Creeper will not be powered.
  */
 public class CreeperPowerEvent extends EntityEvent implements Cancellable {
@@ -73,16 +73,19 @@ public class CreeperPowerEvent extends EntityEvent implements Cancellable {
 
         /**
          * Power change caused by a lightning bolt
+         * <p>
          * Powered state: true
          */
         LIGHTNING,
         /**
          * Power change caused by something else (probably a plugin)
+         * <p>
          * Powered state: true
          */
         SET_ON,
         /**
          * Power change caused by something else (probably a plugin)
+         * <p>
          * Powered state: false
          */
         SET_OFF

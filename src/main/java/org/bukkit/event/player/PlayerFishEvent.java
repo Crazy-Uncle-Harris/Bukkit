@@ -19,7 +19,7 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
 
     /**
      * @deprecated replaced by {@link #PlayerFishEvent(Player, Entity, Fish,
-     * State)} to include the {@link Fish} hook entity.
+     *     State)} to include the {@link Fish} hook entity.
      * @param player
      * @param entity
      * @param state
@@ -37,9 +37,13 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
     }
 
     /**
-     * Gets the entity caught by the player
+     * Gets the entity caught by the player.
+     * <p>
+     * If player has fished successfully, the result may be cast to {@link
+     * Item}.
      *
-     * @return Entity caught by the player, null if fishing, bobber has gotten stuck in the ground or nothing has been caught
+     * @return Entity caught by the player, Entity if fishing, and null if
+     *     bobber has gotten stuck in the ground or nothing has been caught
      */
     public Entity getCaught() {
         return entity;
@@ -47,6 +51,7 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
 
     /**
      * Gets the fishing hook.
+     *
      * @return Fish the entity representing the fishing hook/bobber.
      */
     public Fish getHook() {
@@ -63,8 +68,9 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
 
     /**
      * Gets the amount of experience received when fishing.
-     * <p />
-     * Note: This value has no default effect unless the event state is {@link State#CAUGHT_FISH}.
+     * <p>
+     * Note: This value has no default effect unless the event state is {@link
+     * State#CAUGHT_FISH}.
      *
      * @return the amount of experience to drop
      */
@@ -74,8 +80,9 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
 
     /**
      * Sets the amount of experience received when fishing.
-     * <p />
-     * Note: This value has no default effect unless the event state is {@link State#CAUGHT_FISH}.
+     * <p>
+     * Note: This value has no default effect unless the event state is {@link
+     * State#CAUGHT_FISH}.
      *
      * @param amount the amount of experience to drop
      */
@@ -123,7 +130,8 @@ public class PlayerFishEvent extends PlayerEvent implements Cancellable {
          */
         IN_GROUND,
         /**
-         * When a player fails to catch anything while fishing usually due to poor aiming or timing
+         * When a player fails to catch anything while fishing usually due to
+         * poor aiming or timing
          */
         FAILED_ATTEMPT,
     }

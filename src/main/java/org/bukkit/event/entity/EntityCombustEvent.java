@@ -6,7 +6,7 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Called when an entity combusts.
- * <p />
+ * <p>
  * If an Entity Combust event is cancelled, the entity will not combust.
  */
 public class EntityCombustEvent extends EntityEvent implements Cancellable {
@@ -29,7 +29,8 @@ public class EntityCombustEvent extends EntityEvent implements Cancellable {
     }
 
     /**
-     * @return the amount of time (in seconds) the combustee should be alight for
+     * @return the amount of time (in seconds) the combustee should be alight
+     *     for
      */
     public int getDuration() {
         return duration;
@@ -37,8 +38,9 @@ public class EntityCombustEvent extends EntityEvent implements Cancellable {
 
     /**
      * The number of seconds the combustee should be alight for.
-     * <p />
-     * This value will only ever increase the combustion time, not decrease existing combustion times.
+     * <p>
+     * This value will only ever increase the combustion time, not decrease
+     * existing combustion times.
      *
      * @param duration the time in seconds to be alight for.
      */

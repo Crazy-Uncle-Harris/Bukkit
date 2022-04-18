@@ -14,6 +14,7 @@ public class PlayerDeathEvent extends EntityDeathEvent {
     private int newLevel = 0;
     private int newTotalExp = 0;
     private boolean keepLevel = false;
+    private boolean keepInventory = false;
 
     public PlayerDeathEvent(final Player player, final List<ItemStack> drops, final int droppedExp, final String deathMessage) {
         this(player, drops, droppedExp, 0, deathMessage);
@@ -56,7 +57,7 @@ public class PlayerDeathEvent extends EntityDeathEvent {
 
     /**
      * Gets how much EXP the Player should have at respawn.
-     * <p />
+     * <p>
      * This does not indicate how much EXP should be dropped, please see
      * {@link #getDroppedExp()} for that.
      *
@@ -68,7 +69,7 @@ public class PlayerDeathEvent extends EntityDeathEvent {
 
     /**
      * Sets how much EXP the Player should have at respawn.
-     * <p />
+     * <p>
      * This does not indicate how much EXP should be dropped, please see
      * {@link #setDroppedExp(int)} for that.
      *
@@ -116,7 +117,7 @@ public class PlayerDeathEvent extends EntityDeathEvent {
 
     /**
      * Gets if the Player should keep all EXP at respawn.
-     * <p />
+     * <p>
      * This flag overrides other EXP settings
      *
      * @return True if Player should keep all pre-death exp
@@ -127,12 +128,30 @@ public class PlayerDeathEvent extends EntityDeathEvent {
 
     /**
      * Sets if the Player should keep all EXP at respawn.
-     * <p />
+     * <p>
      * This overrides all other EXP settings
      *
      * @param keepLevel True to keep all current value levels
      */
     public void setKeepLevel(boolean keepLevel) {
         this.keepLevel = keepLevel;
+    }
+
+    /**
+     * Sets if the Player keeps inventory on death.
+     *
+     * @param keepInventory True to keep the inventory
+     */
+    public void setKeepInventory(boolean keepInventory) {
+        this.keepInventory = keepInventory;
+    }
+
+    /**
+     * Gets if the Player keeps inventory on death.
+     *
+     * @return True if the player keeps inventory on death
+     */
+    public boolean getKeepInventory() {
+        return keepInventory;
     }
 }
